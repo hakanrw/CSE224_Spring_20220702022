@@ -1,0 +1,33 @@
+
+70. Printing statistics.
+
+=== semi_cpu_top ===
+
+   Number of wires:                 48
+   Number of wire bits:             61
+   Number of public wires:          17
+   Number of public wire bits:      30
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 58
+     sky130_fd_sc_hd__a21oi_2        2
+     sky130_fd_sc_hd__a41o_2         1
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         2
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__buf_1          8
+     sky130_fd_sc_hd__conb_1         7
+     sky130_fd_sc_hd__dfxtp_2       12
+     sky130_fd_sc_hd__inv_2          2
+     sky130_fd_sc_hd__nand2_2        3
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2         4
+     sky130_fd_sc_hd__or2_2          1
+     sky130_fd_sc_hd__or3_2          2
+     sky130_fd_sc_hd__or3b_2         3
+     sky130_fd_sc_hd__xor2_2         5
+
+   Chip area for module '\semi_cpu_top': 591.817600
+

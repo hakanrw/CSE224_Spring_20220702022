@@ -1,0 +1,178 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: _70_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _77_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _70_/CLK (sky130_fd_sc_hd__dfxtp_2)
+     5    0.02    0.12    0.36    0.36 ^ _70_/Q (sky130_fd_sc_hd__dfxtp_2)
+                                         display_inst.clk_div[0] (net)
+                  0.12    0.00    0.36 ^ _52_/A (sky130_fd_sc_hd__and4_2)
+     1    0.00    0.05    0.20    0.56 ^ _52_/X (sky130_fd_sc_hd__and4_2)
+                                         _21_ (net)
+                  0.05    0.00    0.56 ^ _53_/A (sky130_fd_sc_hd__buf_1)
+     6    0.02    0.29    0.25    0.81 ^ _53_/X (sky130_fd_sc_hd__buf_1)
+                                         _22_ (net)
+                  0.29    0.00    0.81 ^ _62_/C (sky130_fd_sc_hd__and4_2)
+     2    0.01    0.09    0.30    1.11 ^ _62_/X (sky130_fd_sc_hd__and4_2)
+                                         _27_ (net)
+                  0.09    0.00    1.11 ^ _64_/A_N (sky130_fd_sc_hd__and2b_2)
+     1    0.00    0.03    0.21    1.32 v _64_/X (sky130_fd_sc_hd__and2b_2)
+                                         _29_ (net)
+                  0.03    0.00    1.32 v _65_/A (sky130_fd_sc_hd__buf_1)
+     1    0.00    0.02    0.08    1.40 v _65_/X (sky130_fd_sc_hd__buf_1)
+                                         _07_ (net)
+                  0.02    0.00    1.40 v _77_/D (sky130_fd_sc_hd__dfxtp_2)
+                                  1.40   data arrival time
+
+                  0.00   10.00   10.00   clock core_clock (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                                 10.00 ^ _77_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11    9.89   library setup time
+                                  9.89   data required time
+-----------------------------------------------------------------------------
+                                  9.89   data required time
+                                 -1.40   data arrival time
+-----------------------------------------------------------------------------
+                                  8.49   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 68 unannotated drivers.
+ clk
+ control
+ reset
+ _31_/X
+ _32_/X
+ _33_/Y
+ _34_/X
+ _35_/X
+ _36_/X
+ _37_/X
+ _38_/Y
+ _39_/X
+ _40_/X
+ _41_/X
+ _42_/X
+ _43_/X
+ _44_/X
+ _45_/Y
+ _46_/Y
+ _47_/Y
+ _48_/X
+ _49_/X
+ _50_/Y
+ _51_/Y
+ _52_/X
+ _53_/X
+ _54_/Y
+ _55_/Y
+ _56_/X
+ _57_/X
+ _58_/Y
+ _59_/Y
+ _60_/X
+ _61_/X
+ _62_/X
+ _63_/X
+ _64_/X
+ _65_/X
+ _66_/X
+ _67_/X
+ _68_/Y
+ _69_/Y
+ _70_/Q
+ _71_/Q
+ _72_/Q
+ _73_/Q
+ _74_/Q
+ _75_/Q
+ _76_/Q
+ _77_/Q
+ _78_/Q
+ _79_/Q
+ _80_/Q
+ _81_/Q
+ _82_/HI
+ _82_/LO
+ _83_/HI
+ _83_/LO
+ _84_/HI
+ _84_/LO
+ _85_/HI
+ _85_/LO
+ _86_/HI
+ _86_/LO
+ _87_/HI
+ _87_/LO
+ _88_/HI
+ _88_/LO
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 2 input ports missing set_input_delay.
+  control
+  reset
+Warning: There are 3 unclocked register/latch pins.
+  _79_/CLK
+  _80_/CLK
+  _81_/CLK
+Warning: There are 18 unconstrained endpoints.
+  an[0]
+  an[1]
+  an[2]
+  an[3]
+  an[4]
+  an[5]
+  an[6]
+  an[7]
+  seg[0]
+  seg[1]
+  seg[2]
+  seg[3]
+  seg[4]
+  seg[5]
+  seg[6]
+  _79_/D
+  _80_/D
+  _81_/D
