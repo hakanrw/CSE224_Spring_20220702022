@@ -1,0 +1,22 @@
+
+56. Printing statistics.
+
+=== semi_cpu_top ===
+
+   Number of wires:                 29
+   Number of wire bits:             78
+   Number of public wires:           8
+   Number of public wire bits:      33
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 49
+     $_ANDNOT_                       3
+     $_AND_                          5
+     $_DFF_P_                       12
+     $_NAND_                         4
+     $_NOT_                          3
+     $_ORNOT_                        2
+     $_OR_                          10
+     $_XOR_                         10
+
